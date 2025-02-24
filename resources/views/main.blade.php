@@ -82,9 +82,9 @@
         <!-- page content -->
         <main class="flex-shrink-0">
             <div class="container">
-                <h1 class="mt-5">Product</h1>
+                <h1 class="mt-5">Films / Movies</h1>
                 <p class="lead">
-                    Tercera versión de la misma aplicación de productos: fetch (ajax).
+                    AJAX
                 </p>
                 <div class="alert alert-success" role="alert" id="productSuccess">Successfully done.</div>
                 <div class="alert alert-danger" role="alert" id="productError">Error doing.</div>
@@ -99,7 +99,7 @@
 
         <footer class="footer mt-auto py-3 bg-body-tertiary">
             <div class="container">
-                <span class="text-body-secondary">Place sticky footer content here.</span>
+                <span class="text-body-secondary">Footer</span>
             </div>
         </footer>
 

@@ -12,7 +12,7 @@
                         <input type="text" class="form-control" id="createName" name="name">
                     </div>
                     <div class="mb-3">
-                        <label for="createPrice" class="form-label">Price</label>
+                        <label for="createPrice" class="form-label">Rating</label>
                         <input type="number" class="form-control" id="createPrice" name="price">
                     </div>
                 </form>
@@ -39,7 +39,7 @@
                         <input readonly disabled type="text" class="form-control" id="deleteName" name="name">
                     </div>
                     <div class="mb-3">
-                        <label for="deletePrice" class="form-label">Price</label>
+                        <label for="deletePrice" class="form-label">Rating</label>
                         <input readonly disabled type="number" class="form-control" id="deletePrice" name="price">
                     </div>
                 </form>
@@ -66,7 +66,7 @@
                         <input type="text" class="form-control" id="editName" name="name">
                     </div>
                     <div class="mb-3">
-                        <label for="editPrice" class="form-label">Price</label>
+                        <label for="editPrice" class="form-label">Rating</label>
                         <input type="number" class="form-control" id="editPrice" name="price">
                     </div>
                 </form>
@@ -159,7 +159,7 @@
                         <input disabled readonly type="text" class="form-control" id="viewName">
                     </div>
                     <div class="mb-3">
-                        <label for="viewPrice" class="form-label">Price</label>
+                        <label for="viewPrice" class="form-label">Rating</label>
                         <input disabled readonly type="number" class="form-control" id="viewPrice">
                     </div>
                     <div class="mb-3">
