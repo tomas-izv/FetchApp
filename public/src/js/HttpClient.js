@@ -6,7 +6,7 @@ export default class HttpClient {
     }
 
     request(url, method = 'GET', parameters = {}, headers = {}, callBack) {
-        const fullUrl = this.baseUrl + url;
+        let fullUrl = this.baseUrl + url;
         if (method !== 'GET') {
             headers['X-CSRF-Token'] = this.csrfToken;
         }

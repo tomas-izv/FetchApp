@@ -1,3 +1,4 @@
+<!-- Create -->
 <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -12,12 +13,16 @@
                         <input type="text" class="form-control" id="createName" name="name">
                     </div>
                     <div class="mb-3">
-                        <label for="createPrice" class="form-label">Rating</label>
-                        <input type="number" class="form-control" id="createPrice" name="price">
+                        <label for="createRating" class="form-label">Rating</label>
+                        <input type="number" class="form-control" id="createRating" name="rating" min="1" max="10">
+                    </div>
+                    <div class="mb-3">
+                        <label for="createYear" class="form-label">Year</label>
+                        <input type="number" class="form-control" id="createYear" name="year" min="1886">
                     </div>
                 </form>
             </div>
-            <div class="alert alert-warning" role="alert" id="modalCreateWarning">An error ocurred. The product has not been created.</div>
+            <div class="alert alert-warning" role="alert" id="modalCreateWarning">An error ocurred. The film has not been created.</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" id="modalCreateButton">Create</button>
@@ -25,6 +30,8 @@
         </div>
     </div>
 </div>
+
+<!-- Delete -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -39,12 +46,16 @@
                         <input readonly disabled type="text" class="form-control" id="deleteName" name="name">
                     </div>
                     <div class="mb-3">
-                        <label for="deletePrice" class="form-label">Rating</label>
-                        <input readonly disabled type="number" class="form-control" id="deletePrice" name="price">
+                        <label for="deleteRating" class="form-label">Rating</label>
+                        <input type="number" class="form-control" id="deleteRating" name="rating" min="1" max="10">
+                    </div>
+                    <div class="mb-3">
+                        <label for="deleteYear" class="form-label">Year</label>
+                        <input type="number" class="form-control" id="deleteYear" name="year" min="1886">
                     </div>
                 </form>
             </div>
-            <div class="alert alert-warning" role="alert" id="modalDeleteWarning">An error ocurred. The product is still avaliable.</div>
+            <div class="alert alert-warning" role="alert" id="modalDeleteWarning">An error ocurred. The film is still avaliable.</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" id="modalDeleteButton">Delete</button>
@@ -52,6 +63,8 @@
         </div>
     </div>
 </div>
+
+<!-- Edit -->
 <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -66,12 +79,16 @@
                         <input type="text" class="form-control" id="editName" name="name">
                     </div>
                     <div class="mb-3">
-                        <label for="editPrice" class="form-label">Rating</label>
-                        <input type="number" class="form-control" id="editPrice" name="price">
+                        <label for="editRating" class="form-label">Rating</label>
+                        <input type="number" class="form-control" id="editRating" name="rating" min="1" max="10">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editYear" class="form-label">Year</label>
+                        <input type="number" class="form-control" id="editYear" name="year" min="1886">
                     </div>
                 </form>
             </div>
-            <div class="alert alert-warning" role="alert" id="modalEditWarning">An error ocurred. The product has not been edited.</div>
+            <div class="alert alert-warning" role="alert" id="modalEditWarning">An error ocurred. The film has not been edited.</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" id="modalEditButton">Edit</button>
@@ -79,6 +96,8 @@
         </div>
     </div>
 </div>
+
+<!-- Login -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -106,6 +125,8 @@
         </div>
     </div>
 </div>
+
+<!-- Register -->
 <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -141,6 +162,8 @@
         </div>
     </div>
 </div>
+
+<!-- View -->
 <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -159,8 +182,12 @@
                         <input disabled readonly type="text" class="form-control" id="viewName">
                     </div>
                     <div class="mb-3">
-                        <label for="viewPrice" class="form-label">Rating</label>
-                        <input disabled readonly type="number" class="form-control" id="viewPrice">
+                        <label for="viewRating" class="form-label">Rating</label>
+                        <input type="number" class="form-control" id="viewRating" name="rating" min="1" max="10">
+                    </div>
+                    <div class="mb-3">
+                        <label for="viewYear" class="form-label">Year</label>
+                        <input type="number" class="form-control" id="viewYear" name="year" min="1886">
                     </div>
                     <div class="mb-3">
                         <label for="viewCreatedAt" class="form-label">Created at</label>
@@ -172,10 +199,9 @@
                     </div>
                 </form>
             </div>
-            <div class="alert alert-warning" role="alert" id="modalViewWarning">An error ocurred. Product not found.</div>
+            <div class="alert alert-warning" role="alert" id="modalViewWarning">An error ocurred. film not found.</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <!--<button type="button" class="btn btn-primary">Ok</button>-->
             </div>
         </div>
     </div>

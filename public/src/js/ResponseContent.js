@@ -26,7 +26,7 @@ export default class ResponseContent {
         this.cleanContent(this.content);
         this.cleanContent(this.paginationContent);
 
-        this.currentPage = result.products.current_page;
+        this.currentPage = result.films.current_page;
 
         this.setUserContent(result.user);
 
@@ -35,21 +35,21 @@ export default class ResponseContent {
         buttonCreate.setAttribute('data-bs-toggle', 'modal');
         buttonCreate.setAttribute('data-bs-target', '#createModal');
         buttonCreate.classList.add('btn', 'btn-success');
-        buttonCreate.dataset.url = "/product";
+        buttonCreate.dataset.url = "/film";
         buttonCreate.dataset.method = "post";
-        content.appendChild(buttonCreate);
+        this.content.appendChild(buttonCreate);
 
-        result.products.links.forEach(element => {
+        result.films.links.forEach(element => {
             this.pageItem.add(element, (data) => {
                 this.setContent(data);
             });
         });
 
-        result.products.data.forEach(element => {
+        result.films.data.forEach(element => {
             this.responseRow.add(element);
         });
     }
-
+    
     setUserContent(user) {
         this.cleanContent(this.userContent);
         if(user===null) {
@@ -60,16 +60,6 @@ export default class ResponseContent {
     }
 
     setCurrentUserContent(user) {
-        /*<li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                {{ Auth::user()->name }}
-            </a>
-            <div class="dropdown-menu dropdown-menu-end" >
-                <a class="dropdown-item" data-url="/logout">
-                    Logout
-                </a>
-            </div>
-        </li>*/
         let listItem = document.createElement('li');
         listItem.classList.add('nav-item', 'dropdown');
         let a = document.createElement('a');
@@ -113,8 +103,6 @@ export default class ResponseContent {
         aElement = document.createElement('a');
         aElement.classList.add('nav-link');
         aElement.dataset.url = '/register';
-        //aElement.dataset['bs-toggle'] = 'modal';
-        //aElement.dataset['bs-target'] = "#registerModal";
         aElement.setAttribute('data-bs-toggle', 'modal');
         aElement.setAttribute('data-bs-target', '#registerModal');
         textNode = document.createTextNode('Register');

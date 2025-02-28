@@ -4,15 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Film extends Model
 {
-    protected $table = 'product';
+    protected $table = 'film';
 
-    protected $fillable = ['name', 'price'];
+    protected $fillable = ['name', 'rating', 'year'];
 
     static function change($request) {
-        $product = new Product($request->all());
-        return $product->store();
+        $film = new Film($request->all());
+        return $film->store();
     }
 
     function modify($request) {

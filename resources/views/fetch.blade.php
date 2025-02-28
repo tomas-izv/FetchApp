@@ -17,7 +17,7 @@
         let url_base = document.querySelector('meta[name="url-base"]').content
         let fetchBt = document.getElementById('fetchBt')
         fetchBt.addEventListener('click', (event) => {
-            fetch(url_base + '/product', {
+            fetch(url_base + '/film', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -36,7 +36,7 @@
         });
         let fetchUpdateBt = document.getElementById('fetchUpdateBt')
         fetchUpdateBt.addEventListener('click', (event) => {
-            fetch(url_base + '/product/3', {
+            fetch(url_base + '/film/3', {
                 method: 'PUT',
                 headers: {
                     'Accept': 'application/json',
@@ -55,7 +55,7 @@
         });
         let fetchDeleteBt = document.getElementById('fetchDeleteBt')
         fetchDeleteBt.addEventListener('click', (event) => {
-            fetch(url_base + '/product/3', {
+            fetch(url_base + '/film/3', {
                 method: 'DELETE',
                 headers: {
                     'Accept': 'application/json',
